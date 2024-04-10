@@ -1,3 +1,69 @@
+## Chapter 7: Planar Graphs
+
+### 7.1 Planarity
+
+#### Definition 7.1.1
+A graph $G$ is **planar** if it has a drawing in the plane so that its edges intersect only at their ends, and so that no two vertices coincide. The actual drawing is called a **planar embedding** of $G$, or a **planar map**.
+
+- For example, the 3-cube, previously considered in Figure 4.12, is a planar graph, with a planar embedding given in Figure 7.1.
+
+#### Planar Embedding Details
+A planar embedding partitions the plane into connected regions called **faces**; one of these regions, called the **outer face**, is unbounded.
+
+- Consider a planar embedding of a connected graph $G$. The subgraph formed by the vertices and edges in a face is called the **boundary of the face**.
+- Two faces are adjacent if they are incident with a common edge.
+- As one moves around the entire perimeter of a face $f$, one encounters the vertices and edges in a fixed order, say $W_f = (v_0, e_1, v_1, e_2, v_2, ..., v_{n-1}, e_n, v_n)$ where $v_n = v_0$. This sequence is a closed walk of the graph $G$, and is called the **boundary walk** of face $f$.
+- The number of edges in the boundary walk $W_f$ is called the **degree of the face $f$**.
+
+For example, in a given diagram:
+- $\deg(f1) = 6$,
+- $\deg(f2) = 3$,
+- $\deg(f3) = 5$,
+- $\deg(f4) = 14$.
+
+#### Corollary 7.1.3
+If the connected graph $G$ has a planar embedding with $f$ faces, the average degree of a face in the embedding is $\frac{2|E(G)|}{f}$.
+
+### 7.2 Euler’s Formula
+
+Every planar embedding of a given connected planar graph has the same number of faces, a fact that we can deduce from Euler’s Formula.
+
+#### Theorem 7.2.1 (Euler’s Formula)
+Let $G$ be a connected graph with $p$ vertices and $q$ edges. If $G$ has a planar embedding with $f$ faces, then:
+
+$p - q + f = 2$
+
+**Proof:**
+- We prove this result by induction on $q$. Given $G$ is connected, it has a spanning tree, so $q \geq p - 1$.
+- Base Case: As a tree has no cycles, any planar embedding of a tree has just one face, and the theorem holds.
+- Inductive Step: Assume true for graphs with fewer than $q$ edges. If removing an edge $e$ that is not a bridge (hence does not disconnect the graph), we reduce the number of faces by one, maintaining the balance required by Euler's formula.
+
+### 7.3 Stereographic Projection
+
+#### Theorem 7.3.1
+A graph is planar if and only if it can be drawn on the surface of a sphere.
+
+- **Stereographic Projection:** Transforms a planar embedding on the plane to a spherical embedding, making all faces bounded and maintaining planarity.
+- **Details:** If embedding $G$ on a sphere, projecting from the sphere to the plane from a point opposite to the point of tangency (point $A$) maps every point uniquely and preserves the planar nature of the graph.
+
+### 7.4 Platonic Solids
+
+#### Theorem 7.4.1
+There are exactly five platonic graphs: the tetrahedron, the cube, the octahedron, the dodecahedron, and the icosahedron, corresponding to the only five platonic solids.
+
+#### Lemma 7.4.2
+For a planar embedding with $p$ vertices, $q$ edges, and $s$ faces, where each vertex has degree $d \geq 3$ and each face has degree $d' \geq 3$, the pair $(d, d')$ is one of the following:
+- $(3, 3)$,
+- $(3, 4)$,
+- $(4, 3)$,
+- $(3, 5)$,
+- $(5, 3)$.
+
+**Proof Sketch:**
+- Utilize Euler’s formula and face-vertex relationships to derive constraints on $d$ and $d'$.
+- Demonstrate that only the above pairs can satisfy these constraints within a planar graph framework.
+
+
 ### 7.5 Nonplanar Graphs
 
 #### Lemma 7.5.1
