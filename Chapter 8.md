@@ -61,13 +61,13 @@ The XY-construction combined with the concepts of alternating paths provides a m
 - Initialize $pr(v)$ as undefined for all $v \in V(G)$.
 
 ### Step 2:
-- For each vertex $v \in B \setminus Y^*$ such that there is an edge $\{u, v\}$ with $u \in X^{*{$:
+- For each vertex $v \in B \setminus Y^\*$ such that there is an edge $\{u, v\}$ with $u \in X^\*$:
   - Add $v$ to $Y^*$.
   - Set $pr(v) = u$.
 
 ### Step 3:
 - If Step 2 added no vertex to $Y^*$:
-  - Return the maximum matching $M$ and the minimum cover $C = Y^* \cup (A \setminus X^*)$.
+  - Return the maximum matching $M$ and the minimum cover $C = Y^* \cup (A \setminus X^\*)$.
   - Stop.
 
 ## Additional Notes:
