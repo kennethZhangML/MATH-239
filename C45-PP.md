@@ -13,7 +13,7 @@
 7. **Proof Problem 7:** Show that in a connected graph $G$ with breadth-first search tree $T$, the length of the shortest path between two vertices $u$ and $v$ is equal to the level of $v$ in $T$ when $u$ is the root of $T$.
 
 8. **Proof Problem 8:** Prove that Prim’s algorithm produces a minimum spanning tree for any connected graph $G$.
-9. 
+9. Break.
 10. **Proof Problem 9:** Prove that in a connected graph $G$, the number of vertices with odd degree is always even.
 
 11. **Proof Problem 10:** Show that in a connected graph $G$, if every vertex has an even degree, then $G$ has an Eulerian path (not necessarily a circuit).
